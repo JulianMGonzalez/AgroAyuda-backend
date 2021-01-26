@@ -36,7 +36,7 @@ module.exports = {
     update: async(req, res, next) => {
         try {
             console.log(req.body);
-            const reg = await models.Articulo.update({ categoriaId: req.body.categoria, codigo: req.body.codigo, nombre: req.body.nombre, descripcion: req.body.descripcion}, { where: { id: req.body.id } });
+            const reg = await models.Articulo.update({ categoriaId: req.body.categoria, codigo: req.body.codigo, nombre: req.body.nombre, descripcion: req.body.descripcion, precio_venta: req.body.precio_venta, stock: req.body.stock, imagen: req.body.imagen, disponible: req.body.disponible}, { where: { id: req.body.id } });
 
             res.status(200).json(reg);
         } catch (e) {

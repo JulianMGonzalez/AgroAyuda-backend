@@ -9,6 +9,7 @@ const router = routerx();
 
 router.post('/add', auth.verifyUsuario, BlogController.add);
 router.get('/list', auth.verifyUsuario, BlogController.list);
+router.put('/update', auth.verifyUsuario, BlogController.update);
 router.put('/activate', auth.verifyUsuario, BlogController.activate);
 router.put('/deactivate', auth.verifyUsuario, BlogController.deactivate);
 
